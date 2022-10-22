@@ -5,13 +5,14 @@ import ru.netology.authorizationservice.Authorities;
 import ru.netology.authorizationservice.exceptions.InvalidCredentials;
 import ru.netology.authorizationservice.exceptions.UnauthorizedUser;
 import ru.netology.authorizationservice.repository.UserRepository;
+
 import java.util.List;
 
 @Service
 public class AuthorizationService {
 
 
-   private final UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public AuthorizationService(UserRepository userRepository) {
         this.userRepository = userRepository;
