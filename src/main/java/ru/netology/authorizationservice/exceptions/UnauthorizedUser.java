@@ -5,3 +5,4 @@ public class UnauthorizedUser extends RuntimeException {
         super(msg);
     }
 }
+
