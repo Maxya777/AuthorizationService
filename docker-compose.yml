@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  server:
+    build: ./
+    image: 'java-authorize'
+    container_name: 'my-service'
+    ports:
+      - '8080:8080'
