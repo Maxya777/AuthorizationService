@@ -4,16 +4,22 @@ services:
 
   nginx-front:
     image: 'nginx'
-    volumes:
-      - C:\IDEA Projects\AuthorizationService\nginx:/usr/share/nginx/html
     container_name: 'html'
     ports:
       - '80:80'
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
   server:
     build: ./
     image: 'java-authorize'
     container_name: 'my-service'
     ports:
       - '8080:8080'
+
+
+
+
 
 
